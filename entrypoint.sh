@@ -4,12 +4,6 @@ set -o nounset
 set -o pipefail
 set -o xtrace
 
-# Require environment variables.
-if [ -z "${SUBSPACE_HTTP_HOST-}" ] ; then
-    echo "Environment variable SUBSPACE_HTTP_HOST required. Exiting."
-    exit 1
-fi
-
 # Optional environment variables.
 if [ -z "${SUBSPACE_BACKLINK-}" ] ; then
     export SUBSPACE_BACKLINK=""
